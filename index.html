@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="stylesheets/style.css" />
+	<title>COMP 116: Introduction to Security</title>
+</head>
+
+<body>
+	<h1>COMP 116: Introduction to Security</h1>
+	<h2>Tufts University Department of Computer Science, Spring 2020</h2>
+
+	<h2>Instructor</h2>
+	<ul>
+		<li>Ming Chow, <a href="mailto:mchow@cs.tufts.edu">mchow@cs.tufts.edu</a></li>
+		<li>Office Hours in Spring 2020: Wednesdays from 1 - 4 PM, or by appointment, "in my usual spot" (the
+			collaboration area next to the CS Main Office in Halligan). Hours are good until the last day of classes,
+			Thursday, April 23rd.</li>
+	</ul>
+
+	<h2>Class Time and Location</h2>
+	<ul>
+		<li>Tuesdays and Thursdays, 4:30 - 5:45 PM in Nelson Auditorium</li>
+	</ul>
+
+	<h2>Prerequisites</h2>
+	<ul>
+		<li>COMP 15 or Data Structures equivalent course. Strongly recommended that you have taken COMP 40. <span
+				class="note">Please disregard prerequisites listed in the University's bulletin as they are
+				incorrect!</span></li>
+	</ul>
+
+	<h2>Hardware and Software for This Class (on your personal computer)</h2>
+	<h3>Absolute Requirements</h3>
+	<ul>
+		<li>A modern web browser (e.g., Firefox, Google Chrome, Chromium, Safari, Microsoft Edge)</li>
+		<li>A command line interface to run Unix/Linux commands</li>
+	</ul>
+	<h3>Strongly Recommended Requirements</h3>
+	<ul>
+		<li>A computer with at least 20 GB of hard disk space free and 4 GB of RAM</li>
+		<li><a href="kalivm.html">Kali Linux and a Virtual Machine Hypervisor</a></li>
+	</ul>
+
+	<h2>Assessment</h2>
+	<ul>
+		<li>Labs (55%)</li>
+		<li>Final project (15%)</li>
+		<li>2 quizzes (25%)</li>
+		<li>Subjective factors including attendance, asking appropriate questions in class and online, answering
+			questions well in class and online, attending security events in the area and reporting on them, organizing
+			study groups or security-related events, etc. (5%)</li>
+	</ul>
+
+	<h2 id="syllabus">Syllabus</h2>
+
+	<p class="note">Given the nature of this subject, <a href="https://twitter.com/mattblaze/status/725097990944358400"
+			target="_blank">changes to schedule will happen</a>.</p>
+	<p class="note">All labs, announcements, videos, and discussions for this course are on Canvas, <a
+			href="https://canvas.tufts.edu/" target="_blank">https://canvas.tufts.edu/</a>.</p>
+
+	<h3>Topics</h3>
+	<ol>
+		<li>Course Introduction</li>
+		<li>Networking and Packets</li>
+		<li>Attacking Networks: Sniffing, Scanning, Distributed Denial of Service (DDoS)</li>
+		<li>Cryptography</li>
+		<li>Vulnerabilities</li>
+		<li>Web Security</li>
+		<li>Capture The Flags (CTF) Game</li>
+		<li>Static and Dynamic Analysis</li>
+		<li>Malware</li>
+		<li>Forensics and Incident Handling</li>
+		<li>The Future: Nihilism or Hope?</li>
+	</ol>
+
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Agenda, Topics, Readings</th>
+			<th>Deliverables</th>
+		</tr>
+		<tr>
+			<td>Thursday, January 16th</td>
+			<td>
+				<ul>
+					<li>Course Introduction</li>
+					<li><a href="readings/#module1">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 1 assigned, due on Wednesday, January 22nd at 11:59 PM: Working with the Command Line</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, January 21st</td>
+			<td rowspan="2">
+				<ul>
+					<li>Networking and Packets</li>
+					<li><a href="readings/#module2">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, January 23rd</td>
+			<td>
+				<ul>
+					<li>Lab 2 assigned, due on Wednesday, January 29th at 11:59 PM: Packet Sleuth</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, January 28th</td>
+			<td>
+				<ul>
+					<li>Attacking Networks: Sniffing</li>
+					<li><a href="readings/#module3">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, January 30th</td>
+			<td rowspan="2">
+				<ul>
+					<li>Attacking Networks (continued): Scanning</li>
+					<li><a href="readings/#module3">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 3 assigned, due on Wednesday, February 5th at 11:59 PM: Scanning and Reconnaissance</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, February 4th</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, February 6th</td>
+			<td rowspan="2">
+				<ul>
+					<li>Attacking Networks (continued): Distributed Denial of Service (DDoS)</li>
+					<li><a href="readings/#module3">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tuesday, February 11th</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, February 13th</td>
+			<td>
+				<ul>
+					<li>Cryptography: Fundamentals</li>
+					<li><a href="readings/#module4">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 4 assigned, due on Wednesday, March 4th at 11:59 PM: Snake Oil, The Incident Alarm</li>
+					<li>Lab 5: Spring 2020 Password Cracking Contest officially announced, closes on Friday, March 13th
+						at 11:59 PM ABSOLUTE DEADLINE.</li>
+					<li>Practice Quiz 1</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, February 18th</td>
+			<td>
+				<ul>
+					<li>Cryptography (continued): Hash Functions and Password Cracking</li>
+					<li><a href="readings/#module4">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li><a href="finalproject.html">Final Project Announced</a>
+						<ul>
+							<li>Abstract due on Tuesday, March 3rd</li>
+							<li>Outline due on Thursday, April 2nd</li>
+							<li>ABSOLUTE DEADLINE for Paper and Supporting Material: Wednesday, April 29th at 11:59 PM
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Thursday, February 20th</td>
+			<td>
+				<ul>
+					<li>NO CLASS</li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tuesday, February 25th</td>
+			<td>
+				<ul>
+					<li>Cryptography (continued): Asymmetric Algorithms, Diffie Hellman Key Exchange, Transport Layer
+						Security (TLS)</li>
+					<li><a href="readings/#module4">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, February 27th</td>
+			<td>
+				<ul>
+					<li>Vulnerabilities</li>
+					<li><a href="readings/#module5">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Quiz 1</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, March 3rd</td>
+			<td>
+				<ul>
+					<li>Web Security: HTTP Review, OWASP, Web Proxy, Training Grounds, Cross-Site Scripting</li>
+					<li><a href="readings/#module6">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 6 assigned, due on Wednesday, March 11th at 11:59 PM: The XSS Game</li>
+					<li>Lab 7 assigned, due on Wednesday, March 11th at 11:59 PM: Gain Access to Website</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Thursday, March 5th</td>
+			<td>
+				<ul>
+					<li>Web Security (continued): SQL injection</li>
+					<li><a href="readings/#module6">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tuesday, March 10th</td>
+			<td>
+				<ul>
+					<li>Web Security (continued): Cross-Site Request Forgery, Directory Traversal, Command Execution,
+						Local and Remote File Inclusion</li>
+					<li><a href="readings/#module6">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, March 12th</td>
+			<td>
+				<ul>
+					<li>Case Studies</li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tuesday, March 24th</td>
+			<td>
+				<ul>
+					<li>The Capture The Flags (CTF) Game. Location TBD.</li>
+					<li><a href="readings/#module7">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, March 26th</td>
+			<td>
+				<ul>
+					<li>CTF Recap</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 8: The CTF Write Up, due on Wednesday, April 1st</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, March 31st</td>
+			<td>
+				<ul>
+					<li>Static and Dynamic Analysis</li>
+					<li><a href="readings/#module8">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 9 assigned, due on Wednesday, April 8th: Technical Risk Analysis and Static Analysis</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Thursday, April 2nd</td>
+			<td rowspan="3">
+				<ul>
+					<li>Malware</li>
+					<li><a href="readings/#module9">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Lab 10 assigned, due on Wednesday, April 15th: Android Malware Analysis</li>
+					<li>Practice Quiz 2</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, April 7th</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tuesday, April 9th</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tuesday, April 14th</td>
+			<td rowspan="2">
+				<ul>
+					<li>Forensics and Incident Handling</li>
+					<li><a href="readings/#module10">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, April 16th</td>
+			<td>
+				<ul>
+					<li>Quiz 2</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Tuesday, April 21st</td>
+			<td rowspan="2">
+				<ul>
+					<li>The Future: Nihilism or Hope?</li>
+					<li><a href="readings/#module11">Readings and Videos</a></li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Thursday, April 23rd</td>
+			<td>&nbsp;</td>
+	</table>
+
+	<h2>Frequently Asked Questions</h2>
+	<h3>Q: Is there a textbook for this course?</h3>
+	<p>A: No</p>
+	<h3>Q: Are there teaching assistants (TAs) for this course?</h3>
+	<p>A: No</p>
+	<h3>Q: What are the differences between the online version and the classroom version of this course?</h3>
+	<p>A: The only difference between the two versions is that the Capture The Flags game is played in teams in the
+		classroom version of the course while it is played individually in the online version. Everything else is the
+		same: content, labs, assessment, etc.</p>
+	<h3>Q: What is the workload of this course?</h3>
+	<p>A: Here is a list of all the labs with expected length and difficulty:</p>
+	<ul>
+		<li>Lab 1: Working with the Command Line, Short (1 hour max) to Long (3+ hours) --you can put in as much time as
+			you want on this lab</li>
+		<li>Lab 2: Packet Sleuth, Medium (1 - 3 hours)</li>
+		<li>Lab 3: Scanning and Reconnaissance, Very short (30 minutes). <strong>NOTE: This lab cannot be made publicly
+				available because an actual target is used.</strong></li>
+		<li>Lab 4: Python and the Incident Alarm, Long (over 3 hours) to Impossible</li>
+		<li>Lab 5: The Password Cracking Contest, If you crack all the password hashes (read: good luck with that), you
+			will receive an automatic "A" in the course</li>
+		<li>Lab 6: The XSS Game, Short to Medium</li>
+		<li>Lab 7: Gain Access to Website, Very short. <strong>NOTE: This lab cannot be made publicly available because
+				an actual target is used.</strong></li>
+		<li>Lab 8: The CTF Game, A few days in group (classroom version of course) or one week individually (online
+			version of course). <strong>NOTE: This lab cannot be made publicly available because an actual target is
+				used.</strong></li>
+		<li>Lab 9: Technical Risk Analysis and Static Analysis, Short to Medium.</li>
+		<li>Lab 10: Android Malware Analysis, Short to Medium</li>
+	</ul>
+
+	<h3>Q: Does this course count towards the M.S. in Cybersecurity and Public Policy?</h3>
+	<p>A: Yes</p>
+	<h3>Q: Does this course count towards the M.S. in Software Systems Development?</h3>
+	<p>A: Yes. In fact, this is one of the four required courses for the M.S.</p>
+	<h3>Q: Why is using a Kali virtual machine not mandatory for this class and thus strongly recommended?</h3>
+	<p>A: The reasons:</p>
+	<ol>
+		<li>Accessibility. For students who are visually impaired, using a virtual machine can be very difficult.</li>
+		<li>Not all students have a capable laptop. Sometimes due to financial reasons, some students use Chromebooks.
+			The tools required for this course can be installed natively on macOS, Windows, and Linux.</li>
+		<li>Performance. Sometimes, using a VM can be very slow. A VM also do not use native drivers (e.g., for
+			networking).</li>
+	</ol>
+	<h3>Q: Is Piazza used in this course?</h3>
+	<p>Starting spring 2020, no. The reason: it is a nuisance for students to use multiple websites and services for one
+		course. Because Canvas is used for labs and videos, we might as well use it for announcements and discussions.
+	</p>
+	<h3>Q: I have not taken a course on Networks (COMP 112), Operating Systems (COMP 111), or Computer Architecture
+		(COMP 40) yet. Is that a problem?</h3>
+	<p>No. Cyber Security is a very broad field and it is impossible for anyone, even professionals, to know everything.
+		What is important for you is to start thinking about Security.</p>
+	<h3>Q: If I am taking this course for professional purpose, can I have a tuition reimbursement letter or
+		certificate?</h3>
+	<p>A: <a href="https://twitter.com/0xmchow/status/1085649884663828481" target="_blank">Absolutely! It's a nice
+			tuition reimbursement letter, hand signed!</a></p>
+	<h2 id="policy">Course Policies</h2>
+
+	<h3>Student Accessibility Services (SAS)</h3>
+	<p>If you have a disability that requires reasonable accommodations, please contact the Student Accessibility
+		Services office at <a href="mailto:Accessibility@tufts.edu">Accessibility@tufts.edu</a> or 617-627-4539 to make
+		an appointment with an SAS representative to determine appropriate accommodations. Please be aware that
+		accommodations cannot be enacted retroactively, making timeliness a critical aspect for their provision. Please
+		note that it is your responsibility to hand deliver accomodation letter to me.</p>
+
+	<h3>Electronic Devices</h3>
+	<p>Phones must be silent. You are allowed to politely step outside of the class to take phone calls (e.g., for
+		emergencies, job offers).</p>
+
+	<h3>Late Policy</h3>
+	<p>We will grant an automatic extension of 24 hours to you at no cost (i.e., grace period). A lab submitted after
+		the grace period will not be accepted.</p>
+	<p>A lab is expected to be submitted on time. However, we recognize that the exigencies of college life occasionally
+		interfere with on-time submission. If you have difficulty getting the lab in on time, you have two options:</p>
+	<ol>
+		<li>For ordinary difficulties, each student is automatically issued three (3) "extension tokens." By expending
+			an extension token, you can get an automatic 24-hour extension on all deadlines associated with a single
+			lab. To use an extension token, you must e-mail me at <code>mchow@cs.tufts.edu</code>. Thus must be sent
+			before the lab is due and not during the grace period. At most two extension tokens may be expended on any
+			single lab. When you are out of tokens, late labs will no longer be accepted: it will be returned ungraded,
+			and you will receive no credit for the work.</li>
+		<li>If a serious illness affects your ability to complete the lab on time, your first step is to report the
+			illness using the "Illness Notification Form" that is available in WebCenter for Students. We will make
+			suitable arrangements. For extraordinary difficulties, such as bereavement, family emergencies, or other
+			extraordinary unpleasant events, your first step should be to make contact with your associate dean for
+			undergraduate education. You must take this step before the lab is due. Ask your dean to drop me an email or
+			give me a call, and we will make special arrangements that are suited to your circumstances.</li>
+	</ol>
+	<p>Please understand that extension tokens are meant to be used. That is, you will not receive any special bonus at
+		the end of the course if you do not use any of your extension tokens.</p>
+
+</body>
+
+</html>
