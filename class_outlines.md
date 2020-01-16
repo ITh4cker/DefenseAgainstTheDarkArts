@@ -13,6 +13,13 @@
   3. Question and debate everything, ask why
   4. Understand tradeoffs --which is what Security really is
   5. The ultimate goal of this course, to be revisited on the last day of this class
+* Changes for spring 2020
+  1. No TAs
+  2. No Piazza
+  3. Eleven modules
+  4. Course website now explicit details on workload
+* Motivation: https://media.defense.gov/2020/Jan/14/2002234275/-1/-1/0/CSA-WINDOWS-10-CRYPT-LIB-20190114.PDF
+* Expectations of the highest order for this class...
 * The effect of not studying Security...
   - The Tacoma Bridge Failure https://www.youtube.com/watch?v=XggxeuFDaDU
 * The schtick is very different in this course, and this may be arguably the most "different" course you will take in the CS curriculum
