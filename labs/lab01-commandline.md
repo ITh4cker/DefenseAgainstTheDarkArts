@@ -51,3 +51,7 @@ Let's further hone your basic security skills by playing wargames.  This set of 
 Play the Bandit wargame at http://overthewire.org/wargames/bandit/, beginning with level 0.  Play as many levels as you can.  To get credit, show proof that you have played the Bandit wargames by emailing me screenshot of the highest level you have completed.
 
 _This part is dedicated to Olivia MacDougal, Class of 2018_
+
+## Submissions
+
+For students officially enrolled in the course, submit lab on Canvas.
