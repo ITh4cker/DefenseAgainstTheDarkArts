@@ -52,6 +52,6 @@ Play the Bandit wargame at http://overthewire.org/wargames/bandit/, beginning wi
 
 _This part is dedicated to Olivia MacDougal, Class of 2018_
 
-## Submissions
+## Submitting This Lab
 
 For students officially enrolled in the course, submit lab on Canvas.
