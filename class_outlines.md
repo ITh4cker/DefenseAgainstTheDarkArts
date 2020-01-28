@@ -55,7 +55,6 @@
 * Review question 1: The CIA triad 
 * Review question 2: TCP/IP Three-Way Handshake?
 * Review question 3: How many layers in OSI model?  What are the layers from high level to low level?
-* Wall of Sheep
 * A _packet_: contains implementations of all the protocol layers; encapsulation model.  A network communication (e.g., visiting a website, watching a movie) is made up of many packets!
   - How does IP header looks like in a packet? Internet Protocol (IP): RFC 791 => http://www.ietf.org/rfc/rfc791.txt
   - How does TCP header looks like in a packet? Transfer Control Protocol (TCP): RFC 793 => http://www.ietf.org/rfc/rfc793.txt
@@ -67,5 +66,50 @@
   - Reconstruct files (e.g., images) and conversations
   - Rip out any username:password pairs sent-in-the-clear
 * simple.pcap: http://www.cs.tufts.edu/comp/116/simple.pcap
-* email.pcap: http://www.cs.tufts.edu/comp/116/email.pcap
 * The next lab
+
+# Tuesday, January 28th: Packet Analysis, Wall of Sheep, and Sniffing
+* Last class: we delved into basic packet analysis
+  - Reconstructed a conversation in Wireshark via show TCP stream
+* Today:
+  - Filter packets by IP address in Wireshark
+  - Extract username:password pairs sent in plaintext on the network using Ettercap
+* Motivations
+  - Wall of Sheep
+  - An almost ugly spat: https://twitter.com/0xmchow/status/941145910213562369
+  - Recent news: Tinder https://www.wired.com/story/tinder-lack-of-encryption-lets-strangers-spy-on-swipes/
+* So you may be curious: how did we at the Wall of Sheep capture all those packets?
+* tcpdump, Wireshark, ettercap
+* Two types of networks:
+  1. Unswitched - packets flow through all devices on network but you look at only the packets addressed to you......
+    - Welp... http://superuser.com/questions/191191/where-can-i-find-an-unswitched-ethernet-hub
+  2. Switched - packets flow through specific devices on network (most networks now)
+* Step 0: Be root (or administrator)
+* Step 1: promiscuous mode
+* Step 2, Option 1: sniffing unswitched network is easy but now very rare.  Don't need to do anything
+* Step 2, Option 2: Use a LAN Tap: https://shop.hak5.org/products/throwing-star-lan-tap-pro
+  - Instructions: https://www.youtube.com/watch?v=3zUsJm3bwGY
+* Address Resolution Protocol
+  - IP address to MAC address on a network
+  - Recall OSI model and packets
+  - `arp -a`
+  - ARP cache on machine for 20 minutes
+  - No authentication
+* Step 2, Option 3: ARP spoofing or ARP poisoning to sniff switched network
+  - Video: https://www.youtube.com/watch?v=RTXAUJ2yqCg
+* Bettercap
+* Video: https://www.youtube.com/watch?v=9uiA6dGuEE0
+
+# Thursday, January 30th: Scanning, Reconnaisance
+* Last class: sniffing unswitched and switched networks
+* Is sniffing still relevant today?
+* Video: Bettercap and ARP spoofing: https://www.cs.tufts.edu/comp/116/videos/bettercaparpspoof.mp4
+* Preventing sniffing:
+  1. Use encryption and encrypted network protocols
+  2. VPN
+  3. Use switched network......?
+* Preventing ARP poisoning on switched network:
+  - anti-arpspoof: https://www.youngzsoft.net/cc-get-mac-address/anti.htm
+  - ArpON: http://arpon.sourceforge.net/
+  - Antidote
+  - Arpwatch: http://www.linuxandubuntu.com/home/how-to-monitor-ethernet-activity-in-linux-using-arpwatch
