@@ -1,6 +1,6 @@
 # Lab: Scanning and Reconnaissance
 
-##Part 1: Using Nmap
+## Part 1: Using Nmap
 
 For questions 1 to 6, the target's IP address is [redacted --see Canvas]. You are granted permission to attack this remote system.
 
