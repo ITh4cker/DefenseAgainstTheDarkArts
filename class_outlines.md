@@ -104,6 +104,8 @@
 * Last class: sniffing unswitched and switched networks
 * Is sniffing still relevant today?
 * Video: Bettercap and ARP spoofing: https://www.cs.tufts.edu/comp/116/videos/bettercaparpspoof.mp4
+
+# Tuesday February 4th: Scanning
 * Preventing sniffing:
   1. Use encryption and encrypted network protocols
   2. VPN
@@ -113,3 +115,78 @@
   - ArpON: http://arpon.sourceforge.net/
   - Antidote
   - Arpwatch: http://www.linuxandubuntu.com/home/how-to-monitor-ethernet-activity-in-linux-using-arpwatch
+* Scanning
+  - Why? Network reconnaissance.  Warfare 101
+  - Questions for Reconaissance:
+    1. Is the target dead or alive? (i.e., is the target up or down?)
+    2. What kind of device is this?
+    3. What's the purpose of this device? (kind of things is it doing)
+    4. Who is the target connecting / talking to?
+    5. Does target have any open ports?
+    6. Geographically, where is this target located?
+    7. What protocols do the target use?
+    8. Who owns this target?
+    9. Who uses this target?
+    10. What permissions do users have on this target?
+    11. What software (and versions) is this target running?
+  - What devices and computers are up?
+  - What ports are open on a computer?
+  - What services are running?
+  - Where are the computers geographically?
+  - Determine possible vulnerabilities
+* Is scanning still relevant today?
+* Basic method: ping sweep
+* Problems with ping?
+* Introducing Netcat
+* The Network Mapper: nmap
+* Think poking holes, "ask questions"
+* Poking holes => finding interesting and unwanted stuff on networks
+  - https://pen-testing.sans.org/blog/2017/02/28/opening-a-can-of-active-defense-and-cyber-deception-to-confuse-and-frustrate-attackers
+* Geographical information: SHODAN
+
+# Thursday, February 6th and Tuesday, February 10th: Distributed Denial of Service (DDoS) Attacks
+* "Experts understand the dozens of scan techniques and choose the appropriate one (or combination) for a given task. Inexperienced users and script kiddies, on the other hand, try to solve every problem with the default SYN scan. Since Nmap is free, the only barrier to port scanning mastery is knowledge. That certainly beats the automotive world, where it may take great skill to determine that you need a strut spring compressor, then you still have to pay thousands of dollars for it... By default, Nmap performs a SYN Scan, though it substitutes a connect scan if the user does not have proper privileges to send raw packets (requires root access on Unix). Of the scans listed in this section, unprivileged users can only execute connect and FTP bounce scans." https://nmap.org/book/man-port-scanning-techniques.html
+* Defending against scanners
+  - No certain way
+  - Firewalls?
+  - Close services
+  - Packet filtering
+* What could possibly go wrong?
+* Want to be stealthy!
+* RFC 793: if ports are closed and you send "junk" to it, RST packet will be sent! (page 65 of https://tools.ietf.org/html/rfc793)
+  - FIN scan: `sudo nmap -sF ...`
+  - NULL scan: `sudo nmap -sN ...`
+  - XMAS scan: `sudo nmap -sX ...`, # FIN, PSH, URG flags in packet
+* Decoy:
+  - `sudo nmap -D...`
+  - spoofed connections
+  - Must use real + alive IP address, else SYN flood
+* The first "D" (Distributed) in DDoS: attack source is more than one, often thousands of, unique IP addresses
+* SYN flood
+  - The idea: exhaust states in the TCP/IP stack
+  - Recall TCP/IP handshaking
+  - Attacker sends SYN packets with a spoofed source address, the victim, (that goes nowhere)
+  - Victim sends SYN/ACK packet but attacker stays slient
+  - Half-open connections must time out which may take a while
+  - Alas, good SYN packets will not be able to go through
+  - Reference 1: https://www.cert.org/historical/advisories/CA-1996-21.cfm?
+  - Reference 2, RFC 4987: https://tools.ietf.org/html/rfc4987
+  - Reference 3: https://www.juniper.net/documentation/en_US/junos12.1x44/topics/concept/denial-of-service-network-syn-flood-attack-understanding.html
+* Defending against SYN flood
+  - Increase queue
+  - Filtering
+  - SYN cookies
+  - Reduce timer for SYN packets
+* Teardrop (old)
+  - The idea: "involves sending fragmented packets to a target machine. Since the machine receiving such packets cannot reassemble them due to a bug in TCP/IP fragmentation reassembly, the packets overlap one another, crashing the target network device." https://security.radware.com/ddos-knowledge-center/ddospedia/teardrop-attack/
+  - Recall RFC 791 (IP), the IP packet fields in question: Fragment Offset, Flag (namely "Don't fragment" and "More fragments")
+  - Result: "Since the machine receiving such packets cannot reassemble them due to a bug in TCP/IP fragmentation reassembly, the packets overlap one another, crashing the target network device."
+  - Reference: https://www.juniper.net/techpubs/software/junos-es/junos-es92/junos-es-swconfig-security/understanding-teardrop-attacks.html
+* Ping of Death (old)
+  - The idea: violate the IP contract
+  - In RFC 791, the maximum size of an IP packet is 65,535 bytes --including the packet header, which is typically 20 bytes long.
+  - An ICMP echo request is an IP packet with a pseudo header, which is 8 bytes long. Therefore, the maximum allowable size of the data area of an ICMP echo request is 65,507 bytes (65,535 - 20 - 8 = 65,507)
+  - Result: "However, many ping implementations allow the user to specify a packet size larger than 65,507 bytes. A grossly oversized ICMP packet can trigger a range of adverse system reactions such as denial of service (DoS), crashing, freezing, and rebooting."
+* ICMP Flood Attack => Overload victim with a huge number of ICMP echo requests with spoofed source IP addresses.
+* UDP Flood Attack => Same idea of ICMP flood attack but using UDP packets
+* Lab 4
