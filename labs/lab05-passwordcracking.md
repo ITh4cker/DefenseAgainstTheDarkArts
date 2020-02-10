@@ -8,8 +8,7 @@ For students in the COMP 116 Introduction to Security course at Tufts University
 
 ## The Password Hashes
 
-`
-shanemcmahon:$1$AFiagxbY$m1G06dn3f67MJ.lCbK2wD1:1003:1003:,,,:/home/shanemcmahon:/bin/bash
+`shanemcmahon:$1$AFiagxbY$m1G06dn3f67MJ.lCbK2wD1:1003:1003:,,,:/home/shanemcmahon:/bin/bash
 undertaker:$1$N474C.43$0RFoyE1h.7PrLN.wtp8vO0:1004:1004:,,,:/home/undertaker:/bin/bash
 niajax:$1$7cIw2LC4$1JTETzC30ZZQV69/cPaCB.:1005:1005:,,,:/home/niajax:/bin/bash
 beckylynch:$1$H7R1hQX9$to11wDX25cja/iJkOwJdc.:1006:1006:,,,:/home/beckylynch:/bin/bash
@@ -38,8 +37,7 @@ danabrooke:1001:aad3b435b51404eeaad3b435b51404ee:fdc72cd893926606ddd5522a6b38d7d
 finnbalor:1005:aad3b435b51404eeaad3b435b51404ee:bd464fd6f8d57444e94492a8a87c3d58:::
 kofikingston:1004:aad3b435b51404eeaad3b435b51404ee:a3fdfab6f9eceb9d3d49af0826a68150:::
 sashabanks:1006:aad3b435b51404eeaad3b435b51404ee:98c1db08e4ac2d477f948850feafb54b:::
-themiz:1002:aad3b435b51404eeaad3b435b51404ee:2e26315c1c96c9e225e25cf440619fa6:::
-`
+themiz:1002:aad3b435b51404eeaad3b435b51404ee:2e26315c1c96c9e225e25cf440619fa6:::`
 
 ## Rules
 
