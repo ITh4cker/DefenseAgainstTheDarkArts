@@ -100,13 +100,11 @@ This `README` file shall describe the work. This description must:
 ## Submission
 Submit three files: the `README.txt`, `reconstruct_image.py`, `alarm.py`
 
+For students officially enrolled in the course, submit lab on Canvas.
+
 ## Assessment
 This lab is worth 30 points.
 
 * (2 points) `README.txt`
 * (7 points) Part 1: `reconstruct_image.py`
 * (21 points) Part 2: Detection of cleartext passwords, FIN scan, XMAS scan, NULL scan, Nikto scan, someone scanning for Remote Desktop Protocol (RDP)
-
-## Submitting This Lab
-
-For students officially enrolled in the course, submit lab on Canvas.
