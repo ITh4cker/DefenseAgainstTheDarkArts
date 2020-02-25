@@ -73,7 +73,7 @@ When sniffing on a live interface, the tool must keep running. To quit it, press
 ### Part 2: Getting Started
 Here is a working `alarm.py`: https://gist.github.com/mchow01/f0f498f29d2b3bd095b8c93172c6ecf7
 
-What has been written for you: the handling and parsing of command line arguments, reading of PCAP file, and sniffing of network. Download and use inside of your Kali VM. You will also need to install pcapy to work in conjunction with `scapy` on Kali Linux as it is not installed. Run `apt-get install python3-pcapy`
+Feel free to modify the `packetcallback` function. What has been written for you: the handling and parsing of command line arguments, reading of PCAP file, and sniffing of network. Download and use inside of your Kali VM. You will also need to install pcapy to work in conjunction with `scapy` on Kali Linux as it is not installed. Run `apt-get install python3-pcapy`
 
 If you go web browsing in the virtual machine with the alarm running, you will notice the alarm will go off...
 
@@ -81,9 +81,8 @@ If you go web browsing in the virtual machine with the alarm running, you will n
 Your tool must be able to detect the usernames and passwords sent in-the-clear in `set1.pcap`, `set2.pcap`, and `set3.pcap` from the Packet Sleuth lab (Lab 2).
 
 ### Part 2: References
-* Scapy documentation: http://www.secdev.org/projects/scapy/doc/usage.html
+* Scapy documentation: https://scapy.readthedocs.io/en/latest/
 * Scapy Cheat Sheet (SANS Institute): https://blogs.sans.org/pen-testing/files/2016/04/ScapyCheatSheet_v0.2.pdf
-* Black Hat Python: Infinite Possibilities with the Scapy Module (GitHub): https://bt3gl.github.io/black-hat-python-infinite-possibilities-with-the-scapy-module.html
 
 ### The `README` File
 This `README` file shall describe the work. This description must:
