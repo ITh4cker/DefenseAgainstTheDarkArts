@@ -44,6 +44,6 @@ themiz:1002:aad3b435b51404eeaad3b435b51404ee:2e26315c1c96c9e225e25cf440619fa6:::
 * Please be sure to keep records of your cracked passwords, including password pot, screenshots, and logs in case you are questioned.
 * You are allowed to use as many password crackers and word lists that you want and that you can find.
 * You are allowed to use any infrastructure to crack the passwords (e.g., Amazon Web Services, as many graphic cards that you can afford).  Please note that you are responsible for all costs.
-* This contest will end on Friday, March 13th at 11:59 PM EST.  No extension tokens for this lab!
+* This contest will end on Tuesday, March 31st at 11:59 PM EST.  No extension tokens for this lab!
 * You are strongly urged to submit early and often.  Only last submission will count.
 * The number of passwords to crack in order to get full points on this lab won't be announced until the final week of the competition.
