@@ -213,7 +213,6 @@
 * Lab 4
 
 # Tuesday, February 18th: Cryptography
-* Spring 2020 Password Cracking Competition
 * So now crypto...
 * Definitions
 * The golden rule: "Never Roll Your Own Crypto"
@@ -225,3 +224,87 @@
   - Lifetime of information?
 * The only secure crypto algorithm: One-Time Pad
   - Video: https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/one-time-pad
+
+# Tuesday, February 25th: Cryptography, Part II
+* Final project
+* Last class: the golden rules of crypto, symmetric algorithms, asymmetric algorithms, one-way hash functions
+* Today: passwords, how HTTPS work
+* Storing passwords the wrong way
+* Storing passwords the wrong way, redux
+* Storing passwords the right way with a salt
+* Cracking user accounts on Linux systems:
+  - Use /etc/passwd and /etc/shadow files from Linux-based systems
+  - $algorithm$salt$hash
+  - $1$ = MD5
+  - $2$ = Blowfish
+  - $5$ = SHA-256
+  - $6$ = SHA-512
+* Tool: John the Ripper.  Default: simple list then brute force
+* Daniel Miessler's SecLists
+* The spring 2020 password cracking contest, due March 31st
+* Incident:
+  - Chegg: https://www.zdnet.com/article/chegg-to-reset-passwords-for-40-million-users-after-april-2018-hack/
+  - DoorDash: https://arstechnica.com/information-technology/2019/09/doordash-hack-spills-loads-of-data-for-4-9-million-people/
+* Q: How long is your password good for?
+* References
+  - https://unix.stackexchange.com/questions/81240/manually-generate-password-for-etc-shadow
+  - https://www.vidarholen.net/contents/blog/?p=32
+  - https://serverfault.com/questions/514382/why-are-md5-passwords-hashed-differently
+* So how does Transport Layer Security (TLS) (also commonly known as Secure Socket Layer or SSL work)?
+  - First, how HTTP works
+  - Diagram: https://d1smxttentwwqu.cloudfront.net/app/uploads/2015/07/SSLTLS_handshake.png
+  - More: https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/
+  - Why? HTTPS is HTTP inside of a TLS session
+  - Uses BOTH symmetric and asymmetric crypto
+  - Secure communications between two parties over a network
+  - On top of TCP
+  - Different port numbers used for TLS connection.  Port 443 for HTTPS
+  - Part 1: Data between two parties encrypted via symmetric crypto.  Why?
+  - Part 2: Identity of communicating parties identified via asymmetric crypto
+  - Connection integrity via message integrity check using a message authentication code 
+  - Digital certificates - assert the online identities of individuals, computers, and other entities on a network
+    - They are issued by certification authorities (CAs) that must validate the identity of the certificate-holder both before the certificate is issued and when the certificate is used.
+    - Specification: https://technet.microsoft.com/en-us/library/cc776447(v=ws.10).aspx
+* TLS process:
+  1. Client connects to TLS-enabled server. Client requesting a secure connection and presents a list of supported cipher suites (ciphers and hash functions).
+  2. The server checks what the highest SSL/TLS version is that is supported by them both, picks a ciphersuite from one of the client's options (if it supports one), and optionally picks a compression method.
+  3. The server sends back its identification via digital certificate (THIS MAY NOT HAPPEN)
+  4. Client confirms validity of certificate --or NOT!
+  5. Both the server and the client can now compute the session key (or shared secret) for the symmetric encryption and decryption of the data.  This computation of the session key is known as Diffie-Hellman key exchange.
+  6. "The client tells the server that from now on, all communication will be encrypted, and sends an encrypted and authenticated message to the server."
+* References:
+  - https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work
+  - https://stackoverflow.com/questions/788808/how-do-digital-certificates-work-when-used-for-securing-websites-using-ssl
+  - http://security.stackexchange.com/questions/45963/diffie-hellman-key-exchange-in-plain-english
+  - https://blogs.akamai.com/2016/03/enterprise-security---ssltls-primer-part-1---data-encryption.html
+  - https://blogs.akamai.com/2016/03/enterprise-security---ssltls-primer-part-2---public-key-certificates.html
+
+# Thursday, February 27th: Vulnerabilities
+* Recall: vocabulary (Course Introduction)
+* What is a vulnerability?
+* Why talk about this now?
+  - The next topics have a lot to do about vulnerabilities; we have seen the word used quite a bit
+  - Vocabulary
+  - Literature
+  - Understand why software development is very difficult
+  - Misconceptions
+  - The difficulty of disclosure
+* Example (October 16, 2018): https://arstechnica.com/information-technology/2018/10/bug-in-libssh-makes-it-amazingly-easy-for-hackers-to-gain-root-access/
+  - CVE-2018-10933
+* Example: GitHub vulnerability (messagehub)
+* Common Vulnerabilities and Exposures (CVE) https://cve.mitre.org/
+  - SushiDude a.k.a., Steve Christey Coley
+* Common Weakness Enumeration (CWE)
+* The differences between CVE and CWE:
+  - https://www.veracode.com/blog/2016/08/language-appsec
+  - https://danielmiessler.com/blog/difference-cve-cwe/
+* Scanning for vulns:
+  - Nikto https://github.com/sullo/nikto
+  - Nessus
+  - OpenVAS
+  - w3af
+  - Metasploit (Rapid7) https://github.com/rapid7/metasploit-framework
+* If you do a scan or a penetration test of a system and no vulnerabilities are reported, is that a good thing?
+  - The badness-ometer
+* The disclosure problem
+* Quiz 1
