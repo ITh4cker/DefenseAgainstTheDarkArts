@@ -291,20 +291,70 @@
   - The difficulty of disclosure
 * Example (October 16, 2018): https://arstechnica.com/information-technology/2018/10/bug-in-libssh-makes-it-amazingly-easy-for-hackers-to-gain-root-access/
   - CVE-2018-10933
-* Example: GitHub vulnerability (messagehub)
 * Common Vulnerabilities and Exposures (CVE) https://cve.mitre.org/
   - SushiDude a.k.a., Steve Christey Coley
 * Common Weakness Enumeration (CWE)
 * The differences between CVE and CWE:
   - https://www.veracode.com/blog/2016/08/language-appsec
   - https://danielmiessler.com/blog/difference-cve-cwe/
+* Quiz 1
+
+# Tuesday, March 3rd: Web Security, Part 1
+* Last class: vulnerabilities, CVEs, CWEs
+* Why CVEs and CWEs are important: GitHub Security, vulnerabilities section (messagehub)
 * Scanning for vulns:
   - Nikto https://github.com/sullo/nikto
   - Nessus
   - OpenVAS
   - w3af
   - Metasploit (Rapid7) https://github.com/rapid7/metasploit-framework
+* Legality of finding bugs and vulnerabilties
+  - Bug bounties
+    - https://www.facebook.com/whitehat
+    - https://bounty.github.com/
+    - https://www.google.com/about/appsecurity/reward-program/
+    - https://www.tripwire.com/state-of-security/security-data-protection/cyber-security/essential-bug-bounty-programs/
+  - Deliberately vulnerable applications
+    - Metasploitable
+    - Damn Vulnerable Web Application (DVWA) http://www.dvwa.co.uk/
+    - https://github.com/webpwnized/mutillidae
 * If you do a scan or a penetration test of a system and no vulnerabilities are reported, is that a good thing?
   - The badness-ometer
 * The disclosure problem
-* Quiz 1
+* Transitioning into web security
+  - https://www.helpnetsecurity.com/2017/02/14/web-application-vulnerabilities/
+  - "Web application attacks accounted for 73% of all incidents says report": https://www.scmagazine.com/web-application-attacks-accounted-for-73-of-all-incidents-says-report/article/682294/
+  - Veracode's State of Software 2016 report: https://www.veracode.com/sites/default/files/Resources/Reports/state-of-software-security-volume-7-veracode-report.pdf
+  - Akamai found that SQL injection attacks represent two-third of all web app attacks
+    - https://twitter.com/Akamai/status/1145472095998152706
+    - https://www.darkreading.com/attacks-breaches/sql-injection-attacks-represent-two-third-of-all-web-app-attacks/d/d-id/1334960
+* OWASP Top 10: https://www.owasp.org/index.php/Top_10_2017-Top_10
+* 2019 CWE Top 25 Most Dangerous Software Errors https://cwe.mitre.org/top25/archive/2019/2019_cwe_top25.html
+* How HTTP works
+* How HTTPS works
+* Playground of vulnerable web apps
+* Proxies: Burp, mitmproxy
+* Vulnerability: hard-coding credentials
+* Vulnerability: least privilege
+* Vulnerability: Cross-Site Scripting (XSS)
+  - https://www.youtube.com/watch?v=t161cahMAZc
+* Defending against XSS
+
+# Thursday, March 5th: Web Security, Part 2
+* Basic SQL: https://sqlzoo.net/
+* SQL injection
+* Next labs
+
+# Tuesday, October 29th and Thursday, October 31st: Web Security, Continued
+* CTF team selection
+* Last time: a problem with XSS name entry in DVWA...
+* Web proxy: Burp
+* Defending against XSS
+* Defending against SQL injection
+* Cross-Site Request Forgery
+* Command injection
+* Directory traversal
+* Challenge problem
+* Enumeration
+* Local and remote file inclusion
+* Last spring...
