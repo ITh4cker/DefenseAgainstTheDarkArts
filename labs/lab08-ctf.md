@@ -8,21 +8,25 @@
 
 In this traditional game in team of no more than 4 people, you will be finding and exploiting vulnerabilities in a series of applications, mainly web, to gain access to information you should not have access to. The goal is to find the "flags" placed on the server or servers. As in the past, I will tell you how many flags I have planted. I will also an provide obscure hint for each of them.
 
+## Changes to Game as Determined on Sunday, March 15th
+
+* Teams will be announced on Thursday, March 26th.
+* Game will be played digitally for one week, not in a span of two days.
+* Because game will be played remotely for one week, the penalty mechanism in game is abandoned.
+
 ## Instructions
 
-The game starting IP address and URL: will be made available at 4:30 PM on Thursday, March 26th.
+The game starting IP address and URL: will be made available at 10:00 AM PDT on Monday, March 30th.
 
-The scoreboard URL: will be made available at 4:30 PM on Thursday, March 26th.
+The scoreboard URL: will be made available at 10:00 AM PDT on Monday, March 30th.
 
 ## Logistics
 
-* Team selection form will be open on Sunday, March 8th
-* CTF teams will be determined by Thursday, March 12th
-* Class will meet at Halligan 111A at 4:30 PM EST on Thursday, March 26th.  We will also have Halligan 118 reserved
-* CTF game opens on on Thursday, March 26th at 4:30 PM EST
-* Points submitted after 10 AM on Friday, March 27th are worth 1/2 value.  This is subject to change.
-* CTF game closes on Saturday, March 28th at 5:00 PM EST
-* CTF write-up due on Wednesday, April 1st at 11:59 PM EST, one submission per team via email.
+* Team selection form will be open on Sunday, March 8th.
+* CTF teams will be determined by Thursday, March 26th.
+* CTF game opens on Monday, March 30th at 10 AM PDT.
+* CTF game ends on Friday, April 3rd at 5 PM PDT.
+* CTF write-up due on Wednesday, April 8th at 11:59 PM PDT, one submission per team via email.
 
 ## A Flag
 
