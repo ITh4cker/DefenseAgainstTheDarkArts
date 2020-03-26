@@ -6,7 +6,7 @@
 
 ## Overview
 
-In this traditional game in team of no more than 4 people, you will be finding and exploiting vulnerabilities in a series of applications, mainly web, to gain access to information you should not have access to. The goal is to find the "flags" placed on the server or servers. As in the past, I will tell you how many flags I have planted. I will also an provide obscure hint for each of them.
+In this traditional game in team of ideally 4 people, you will be finding and exploiting vulnerabilities in a series of applications, mainly web, to gain access to information you should not have access to. The goal is to find the "flags" placed on the server or servers. As in the past, I will tell you how many flags I have planted. I will also an provide obscure hint for each of them.
 
 ## Changes to Game as Determined on Sunday, March 15th
 
